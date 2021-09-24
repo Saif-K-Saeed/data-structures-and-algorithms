@@ -170,9 +170,9 @@ Write a function named hasChildrenEntries that is similar to your hasChildrenVal
 The input and output of this function are the same as the input and output from challenge 3.
 ------------------------------------------------------------------------------------------------ */
 
-const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
-};
+// const hasChildrenEntries = (arr, character) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -180,9 +180,9 @@ CHALLENGE 8 - Stretch Goal
 Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
 ------------------------------------------------------------------------------------------------ */
 
-const totalCharacters = (arr) => {
-  // Solution code here...
-};
+// const totalCharacters = (arr) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -194,11 +194,11 @@ All of these objects should be added to an array named "sizes". Return the "size
 For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ... ].
 ------------------------------------------------------------------------------------------------ */
 
-const houseSize = (arr) => {
-  const sizes = [];
-  // Solution code here...
-  return sizes;
-};
+// const houseSize = (arr) => {
+//   const sizes = [];
+//   // Solution code here...
+//   return sizes;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -216,13 +216,13 @@ All of these objects should be added to an array named "survivors". Return the "
 For example: [ { house: 'Stark', members: 6 }, { house: 'Arryn', members: 2 }, ... ].
 ------------------------------------------------------------------------------------------------ */
 
-const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
+// const deceasedSpouses = ['Catelyn', 'Lysa', 'Robert', 'Khal Drogo', 'Alerie'];
 
-const houseSurvivors = (arr) => {
-  const survivors = [];
-  // Solution code here...
-  return survivors;
-};
+// const houseSurvivors = (arr) => {
+//   const survivors = [];
+//   // Solution code here...
+//   return survivors;
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -290,31 +290,31 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
-  test('It should return true for characters that have children', () => {
-    expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
-  });
+// xdescribe('Testing challenge 7', () => {
+//   test('It should return true for characters that have children', () => {
+//     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
+//   });
 
-  test('It should return false to characters who do not have children', () => {
-    expect(hasChildrenEntries(characters, 'Jon S.')).toBeFalsy();
-  });
-});
+//   test('It should return false to characters who do not have children', () => {
+//     expect(hasChildrenEntries(characters, 'Jon S.')).toBeFalsy();
+//   });
+// });
 
-xdescribe('Testing challenge 8', () => {
-  test('It should return the number of characters in the array', () => {
-    expect(totalCharacters(characters)).toStrictEqual(27);
-  });
-});
+// xdescribe('Testing challenge 8', () => {
+//   test('It should return the number of characters in the array', () => {
+//     expect(totalCharacters(characters)).toStrictEqual(27);
+//   });
+// });
 
-xdescribe('Testing challenge 9', () => {
-  test('It should return an object for each house containing the name and size', () => {
-    expect(houseSize(characters)[1]).toStrictEqual({ house: 'Arryn', members: 3 });
-    expect(houseSize(characters).length).toStrictEqual(7);
-  });
-});
+// xdescribe('Testing challenge 9', () => {
+//   test('It should return an object for each house containing the name and size', () => {
+//     expect(houseSize(characters)[1]).toStrictEqual({ house: 'Arryn', members: 3 });
+//     expect(houseSize(characters).length).toStrictEqual(7);
+//   });
+// });
 
-xdescribe('Testing challenge 10', () => {
-  test('It should not include any deceased spouses', () => {
-    expect(houseSurvivors(characters)[2]).toStrictEqual({ house: 'Lannister', members: 4 });
-  });
-});
+// xdescribe('Testing challenge 10', () => {
+//   test('It should not include any deceased spouses', () => {
+//     expect(houseSurvivors(characters)[2]).toStrictEqual({ house: 'Lannister', members: 4 });
+//   });
+// });
