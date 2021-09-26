@@ -119,8 +119,8 @@ const salesData = (hours, data) => {
   // Solution code here...
   let formattedData = [];
   let dataObject = {};
-  data.forEach((element,index) => {
-    dataObject = {sales: `${element} cookies`,time: hours[index] }
+  data.forEach((element, index) => {
+    dataObject = { sales: `${element} cookies`, time: hours[index] };
     formattedData.push(dataObject);
   });
 
@@ -179,9 +179,9 @@ Here is a sample board:
 The top row of the board is considered row zero and row numbers increase as they go down.
 ------------------------------------------------------------------------------------------------ */
 
-const battleship = (board, row, col) => {
-  //  Solution code here...
-};
+// const battleship = (board, row, col) => {
+//   //  Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 8 - Stretch Goal
@@ -191,9 +191,9 @@ Write a function named calculateProduct that takes in a two-dimensional array of
 For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
-const calculateProduct = (numbers) => {
-  // Solution code here...
-};
+// const calculateProduct = (numbers) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 9 - Stretch Goal
@@ -204,16 +204,16 @@ Calculate the average daily temperature during that entire period. Your output s
 ------------------------------------------------------------------------------------------------ */
 
 // Real daily average temperatures for Seattle, October 1-28 2017
-const weeklyTemperatures = [
-  [66, 64, 58, 65, 71, 57, 60],
-  [57, 65, 65, 70, 72, 65, 51],
-  [55, 54, 60, 53, 59, 57, 61],
-  [65, 56, 55, 52, 55, 62, 57],
-];
+// const weeklyTemperatures = [
+//   [66, 64, 58, 65, 71, 57, 60],
+//   [57, 65, 65, 70, 72, 65, 51],
+//   [55, 54, 60, 53, 59, 57, 61],
+//   [65, 56, 55, 52, 55, 62, 57],
+// ];
 
-const averageDailyTemperature = (weather) => {
-  // Solution code here...
-};
+// const averageDailyTemperature = (weather) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 10 - Stretch Goal
@@ -225,16 +225,16 @@ Calculate the average temperature for each week and return the value of the lowe
 For example, in the data set below, the lowest weekly average is 46, which is the average of the temperatures in week 2. All other weeks have average temperatures that are greater than 46.
 ------------------------------------------------------------------------------------------------ */
 
-let lowestWeeklyTemperatureData = [
-  [33, 64, 58, 65, 71, 57, 60],
-  [40, 45, 33, 53, 44, 59, 48],
-  [55, 54, 60, 53, 59, 57, 61],
-  [65, 56, 55, 52, 55, 62, 57],
-];
+// let lowestWeeklyTemperatureData = [
+//   [33, 64, 58, 65, 71, 57, 60],
+//   [40, 45, 33, 53, 44, 59, 48],
+//   [55, 54, 60, 53, 59, 57, 61],
+//   [65, 56, 55, 52, 55, 62, 57],
+// ];
 
-const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
-};
+// const lowestWeeklyAverage = (weather) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 11 - Stretch Goal
@@ -248,9 +248,9 @@ The function should parse the string as rows and columns and compute the sum of 
 For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
-const excel = (str) => {
-  // Solution code here...
-};
+// const excel = (str) => {
+//   // Solution code here...
+// };
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -316,57 +316,57 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
-  const battleshipData = [
-    ['#', ' ', '#', ' '],
-    ['#', ' ', '#', ' '],
-    ['#', ' ', ' ', ' '],
-    [' ', ' ', '#', '#'],
-  ];
+// xdescribe('Testing challenge 7', () => {
+//   const battleshipData = [
+//     ['#', ' ', '#', ' '],
+//     ['#', ' ', '#', ' '],
+//     ['#', ' ', ' ', ' '],
+//     [' ', ' ', '#', '#'],
+//   ];
 
-  test('It should return "hit" when it hits a boat', () => {
-    expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
-    expect(battleship(battleshipData, 1, 0)).toStrictEqual('hit');
-  });
+//   test('It should return "hit" when it hits a boat', () => {
+//     expect(battleship(battleshipData, 0, 0)).toStrictEqual('hit');
+//     expect(battleship(battleshipData, 1, 0)).toStrictEqual('hit');
+//   });
 
-  test('It should return "miss" when it doesn\'t hit a boat', () => {
-    expect(battleship(battleshipData, 0, 1)).toStrictEqual('miss');
-    expect(battleship(battleshipData, 3, 0)).toStrictEqual('miss');
-  });
-});
+//   test('It should return "miss" when it doesn\'t hit a boat', () => {
+//     expect(battleship(battleshipData, 0, 1)).toStrictEqual('miss');
+//     expect(battleship(battleshipData, 3, 0)).toStrictEqual('miss');
+//   });
+// });
 
-xdescribe('Testing challenge 8', () => {
-  test('It should multiply all the numbers together', () => {
-    expect(calculateProduct([[1, 2], [3, 4], [5, 6]])).toStrictEqual(720);
-  });
+// xdescribe('Testing challenge 8', () => {
+//   test('It should multiply all the numbers together', () => {
+//     expect(calculateProduct([[1, 2], [3, 4], [5, 6]])).toStrictEqual(720);
+//   });
 
-  test('It should return zero if there are any zeroes in the data', () => {
-    expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
-  });
-  test('It should work even if some of the arrays contain no numbers', () => {
-    expect(calculateProduct([[1, 2], [], [3, 4, 5]])).toStrictEqual(120);
-  });
-});
+//   test('It should return zero if there are any zeroes in the data', () => {
+//     expect(calculateProduct([[2, 3, 4, 6, 0], [4, 3, 7], [2, 4, 6]])).toStrictEqual(0);
+//   });
+//   test('It should work even if some of the arrays contain no numbers', () => {
+//     expect(calculateProduct([[1, 2], [], [3, 4, 5]])).toStrictEqual(120);
+//   });
+// });
 
-xdescribe('Testing challenge 9', () => {
-  test('It should calculate and return the average temperature of the data set', () => {
-    expect(averageDailyTemperature(weeklyTemperatures)).toStrictEqual(60.25);
-  });
-});
+// xdescribe('Testing challenge 9', () => {
+//   test('It should calculate and return the average temperature of the data set', () => {
+//     expect(averageDailyTemperature(weeklyTemperatures)).toStrictEqual(60.25);
+//   });
+// });
 
-xdescribe('Testing challenge 10', () => {
-  test('It should return the lowest weekly average temperature within the data set', () => {
-    expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
-    expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
-  });
-});
+// xdescribe('Testing challenge 10', () => {
+//   test('It should return the lowest weekly average temperature within the data set', () => {
+//     expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
+//     expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
+//   });
+// });
 
-xdescribe('Testing challenge 11', () => {
-  test('It should return the total count for each row', () => {
-    let result = excel('1,1,1\n4,4,4\n9,9,9');
-    expect(result.length).toStrictEqual(3);
-    expect(result[0]).toStrictEqual(3);
-    expect(result[1]).toStrictEqual(12);
-    expect(result[2]).toStrictEqual(27);
-  });
-});
+// xdescribe('Testing challenge 11', () => {
+//   test('It should return the total count for each row', () => {
+//     let result = excel('1,1,1\n4,4,4\n9,9,9');
+//     expect(result.length).toStrictEqual(3);
+//     expect(result[0]).toStrictEqual(3);
+//     expect(result[1]).toStrictEqual(12);
+//     expect(result[2]).toStrictEqual(27);
+//   });
+// });
