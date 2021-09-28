@@ -25,7 +25,7 @@ function transformToLis(obj){
     arry.push(`<li>${key}: ${value}</li>`);
   }
   return arry;
-};
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -161,7 +161,7 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-  return data.filter((char) => char.gender === 'male' || 
+  return data.filter((char) => char.gender === 'male' ||
   char.gender === 'female').map((character) => character.name).join(' and ');
 };
 
